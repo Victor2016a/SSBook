@@ -1,0 +1,7 @@
+query FavoriteAuthors {
+  favoriteAuthors {
+    picture
+    name
+    booksCount
+  }
+}

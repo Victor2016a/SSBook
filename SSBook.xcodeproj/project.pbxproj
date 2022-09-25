@@ -14,13 +14,16 @@
 		1358349928DF3CC60009D4B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1358349828DF3CC60009D4B9 /* Assets.xcassets */; };
 		1358349C28DF3CC60009D4B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1358349A28DF3CC60009D4B9 /* LaunchScreen.storyboard */; };
 		135834CB28DFCD600009D4B9 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 135834CA28DFCD600009D4B9 /* schema.json */; };
-		135834D228DFCF3E0009D4B9 /* QueryDetails.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 135834D028DFCF3E0009D4B9 /* QueryDetails.graphql */; };
-		135834D328DFCF3E0009D4B9 /* QueryHome.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 135834D128DFCF3E0009D4B9 /* QueryHome.graphql */; };
 		135834D828DFD0050009D4B9 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 135834D728DFD0050009D4B9 /* Apollo */; };
 		135834DA28DFD0050009D4B9 /* ApolloAPI in Frameworks */ = {isa = PBXBuildFile; productRef = 135834D928DFD0050009D4B9 /* ApolloAPI */; };
 		135834DC28DFD0050009D4B9 /* ApolloCodegenLib in Frameworks */ = {isa = PBXBuildFile; productRef = 135834DB28DFD0050009D4B9 /* ApolloCodegenLib */; };
-		135834DE28DFEA900009D4B9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135834DD28DFEA900009D4B9 /* API.swift */; };
 		135834E028DFEE5B0009D4B9 /* ApolloNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135834DF28DFEE5B0009D4B9 /* ApolloNetwork.swift */; };
+		135834E628E09D070009D4B9 /* QueryAllBooks.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 135834E128E09D070009D4B9 /* QueryAllBooks.graphql */; };
+		135834E728E09D070009D4B9 /* QueryUserPicture.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 135834E228E09D070009D4B9 /* QueryUserPicture.graphql */; };
+		135834E828E09D070009D4B9 /* QueryFavoriteAuthors.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 135834E328E09D070009D4B9 /* QueryFavoriteAuthors.graphql */; };
+		135834E928E09D070009D4B9 /* QueryFavoriteBook.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 135834E428E09D070009D4B9 /* QueryFavoriteBook.graphql */; };
+		135834EA28E09D070009D4B9 /* QueryFavoriteBooks.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 135834E528E09D070009D4B9 /* QueryFavoriteBooks.graphql */; };
+		135834EC28E09F7E0009D4B9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135834EB28E09F7E0009D4B9 /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,10 +36,13 @@
 		1358349B28DF3CC60009D4B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1358349D28DF3CC60009D4B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		135834CA28DFCD600009D4B9 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
-		135834D028DFCF3E0009D4B9 /* QueryDetails.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QueryDetails.graphql; sourceTree = "<group>"; };
-		135834D128DFCF3E0009D4B9 /* QueryHome.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QueryHome.graphql; sourceTree = "<group>"; };
-		135834DD28DFEA900009D4B9 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		135834DF28DFEE5B0009D4B9 /* ApolloNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloNetwork.swift; sourceTree = "<group>"; };
+		135834E128E09D070009D4B9 /* QueryAllBooks.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QueryAllBooks.graphql; sourceTree = "<group>"; };
+		135834E228E09D070009D4B9 /* QueryUserPicture.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QueryUserPicture.graphql; sourceTree = "<group>"; };
+		135834E328E09D070009D4B9 /* QueryFavoriteAuthors.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QueryFavoriteAuthors.graphql; sourceTree = "<group>"; };
+		135834E428E09D070009D4B9 /* QueryFavoriteBook.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QueryFavoriteBook.graphql; sourceTree = "<group>"; };
+		135834E528E09D070009D4B9 /* QueryFavoriteBooks.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QueryFavoriteBooks.graphql; sourceTree = "<group>"; };
+		135834EB28E09F7E0009D4B9 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,13 +79,16 @@
 			isa = PBXGroup;
 			children = (
 				135834CA28DFCD600009D4B9 /* schema.json */,
-				135834DD28DFEA900009D4B9 /* API.swift */,
+				135834EB28E09F7E0009D4B9 /* API.swift */,
 				135834DF28DFEE5B0009D4B9 /* ApolloNetwork.swift */,
 				1358348F28DF3CC40009D4B9 /* AppDelegate.swift */,
 				1358349128DF3CC40009D4B9 /* SceneDelegate.swift */,
 				1358349328DF3CC40009D4B9 /* ViewController.swift */,
-				135834D128DFCF3E0009D4B9 /* QueryHome.graphql */,
-				135834D028DFCF3E0009D4B9 /* QueryDetails.graphql */,
+				135834E228E09D070009D4B9 /* QueryUserPicture.graphql */,
+				135834E528E09D070009D4B9 /* QueryFavoriteBooks.graphql */,
+				135834E328E09D070009D4B9 /* QueryFavoriteAuthors.graphql */,
+				135834E128E09D070009D4B9 /* QueryAllBooks.graphql */,
+				135834E428E09D070009D4B9 /* QueryFavoriteBook.graphql */,
 				1358349528DF3CC40009D4B9 /* Main.storyboard */,
 				1358349828DF3CC60009D4B9 /* Assets.xcassets */,
 				1358349A28DF3CC60009D4B9 /* LaunchScreen.storyboard */,
@@ -155,12 +164,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				135834E628E09D070009D4B9 /* QueryAllBooks.graphql in Resources */,
 				1358349C28DF3CC60009D4B9 /* LaunchScreen.storyboard in Resources */,
+				135834E828E09D070009D4B9 /* QueryFavoriteAuthors.graphql in Resources */,
+				135834EA28E09D070009D4B9 /* QueryFavoriteBooks.graphql in Resources */,
 				1358349928DF3CC60009D4B9 /* Assets.xcassets in Resources */,
 				1358349728DF3CC40009D4B9 /* Main.storyboard in Resources */,
+				135834E728E09D070009D4B9 /* QueryUserPicture.graphql in Resources */,
 				135834CB28DFCD600009D4B9 /* schema.json in Resources */,
-				135834D228DFCF3E0009D4B9 /* QueryDetails.graphql in Resources */,
-				135834D328DFCF3E0009D4B9 /* QueryHome.graphql in Resources */,
+				135834E928E09D070009D4B9 /* QueryFavoriteBook.graphql in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -195,8 +207,8 @@
 				1358349428DF3CC40009D4B9 /* ViewController.swift in Sources */,
 				135834E028DFEE5B0009D4B9 /* ApolloNetwork.swift in Sources */,
 				1358349028DF3CC40009D4B9 /* AppDelegate.swift in Sources */,
-				135834DE28DFEA900009D4B9 /* API.swift in Sources */,
 				1358349228DF3CC40009D4B9 /* SceneDelegate.swift in Sources */,
+				135834EC28E09F7E0009D4B9 /* API.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

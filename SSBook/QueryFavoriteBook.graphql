@@ -1,4 +1,4 @@
-query DetailsView($id: ID!) {
+query FavoriteBook($id: ID!) {
   
   book(id: $id) {
     cover
@@ -11,4 +11,3 @@ query DetailsView($id: ID!) {
     description
   }
 }
-
