@@ -1,0 +1,14 @@
+query DetailsView($id: ID!) {
+  
+  book(id: $id) {
+    cover
+    name
+    
+    author {
+      name
+    }
+
+    description
+  }
+}
+

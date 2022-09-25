@@ -7,13 +7,19 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+//    ApolloNetwork.shared.apollo.fetch(query: DetailsViewQuery(id: "1")) { result in
+//      switch result {
+//      case .success(let detailsBook):
+//        print(detailsBook.data?.book)
+//      case .failure(let error):
+//        print(error.localizedDescription)
+//      }
+//    }
   }
-
-
 }
 

@@ -1,0 +1,26 @@
+query HomeView {
+  userPicture
+
+  favoriteBooks {
+    id
+    cover
+    name
+    author {
+      name
+    }
+  }
+  
+  favoriteAuthors {
+    picture
+    name
+    booksCount
+  }
+  
+  allBooks {
+    cover
+    name
+    author {
+      name
+    }
+  }
+}
