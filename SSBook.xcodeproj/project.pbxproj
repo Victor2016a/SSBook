@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		1358349028DF3CC40009D4B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358348F28DF3CC40009D4B9 /* AppDelegate.swift */; };
 		1358349228DF3CC40009D4B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358349128DF3CC40009D4B9 /* SceneDelegate.swift */; };
-		1358349428DF3CC40009D4B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358349328DF3CC40009D4B9 /* ViewController.swift */; };
-		1358349728DF3CC40009D4B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1358349528DF3CC40009D4B9 /* Main.storyboard */; };
+		1358349428DF3CC40009D4B9 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358349328DF3CC40009D4B9 /* TabBarViewController.swift */; };
 		1358349928DF3CC60009D4B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1358349828DF3CC60009D4B9 /* Assets.xcassets */; };
 		1358349C28DF3CC60009D4B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1358349A28DF3CC60009D4B9 /* LaunchScreen.storyboard */; };
 		135834CB28DFCD600009D4B9 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = 135834CA28DFCD600009D4B9 /* schema.json */; };
@@ -24,14 +23,41 @@
 		135834E928E09D070009D4B9 /* QueryFavoriteBook.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 135834E428E09D070009D4B9 /* QueryFavoriteBook.graphql */; };
 		135834EA28E09D070009D4B9 /* QueryFavoriteBooks.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 135834E528E09D070009D4B9 /* QueryFavoriteBooks.graphql */; };
 		135834EC28E09F7E0009D4B9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135834EB28E09F7E0009D4B9 /* API.swift */; };
+		135834F528E0AD580009D4B9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135834F428E0AD580009D4B9 /* HomeView.swift */; };
+		135834F728E0AD710009D4B9 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135834F628E0AD710009D4B9 /* HomeViewModel.swift */; };
+		135834F928E0AD7F0009D4B9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135834F828E0AD7F0009D4B9 /* HomeViewController.swift */; };
+		135834FE28E0AE520009D4B9 /* FavoriteBooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135834FD28E0AE520009D4B9 /* FavoriteBooksView.swift */; };
+		1358350028E0AE6B0009D4B9 /* FavoriteBooksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135834FF28E0AE6B0009D4B9 /* FavoriteBooksCollectionViewCell.swift */; };
+		1358350228E0AEAC0009D4B9 /* FavoriteBooksViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358350128E0AEAC0009D4B9 /* FavoriteBooksViewModelCell.swift */; };
+		1358350428E0AEF30009D4B9 /* FavoriteAuthorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358350328E0AEF30009D4B9 /* FavoriteAuthorsView.swift */; };
+		1358350628E0AF2B0009D4B9 /* FavoriteAuthorsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358350528E0AF2B0009D4B9 /* FavoriteAuthorsCollectionViewCell.swift */; };
+		1358350828E0AF420009D4B9 /* FavoriteAuthorsViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358350728E0AF420009D4B9 /* FavoriteAuthorsViewModelCell.swift */; };
+		1358350A28E0B7340009D4B9 /* AllBooksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358350928E0B7340009D4B9 /* AllBooksView.swift */; };
+		1358350C28E0B7D20009D4B9 /* AllBooksViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358350B28E0B7D20009D4B9 /* AllBooksViewCell.swift */; };
+		1358350E28E0B7E90009D4B9 /* AllBooksViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358350D28E0B7E90009D4B9 /* AllBooksViewModelCell.swift */; };
+		1358351128E0B8880009D4B9 /* DetailsBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358351028E0B8880009D4B9 /* DetailsBookView.swift */; };
+		1358351328E0B8A50009D4B9 /* DetailsBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358351228E0B8A50009D4B9 /* DetailsBookViewModel.swift */; };
+		1358351528E0B8BA0009D4B9 /* DetailsBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358351428E0B8BA0009D4B9 /* DetailsBookViewController.swift */; };
+		1358351B28E0D0120009D4B9 /* InformationBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358351A28E0D0120009D4B9 /* InformationBookView.swift */; };
+		1358351D28E0D0440009D4B9 /* InformationBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358351C28E0D0440009D4B9 /* InformationBookViewModel.swift */; };
+		1358352928E32AE60009D4B9 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358352828E32AE60009D4B9 /* ImageProvider.swift */; };
+		1358352E28E4A09C0009D4B9 /* ScreenAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358352D28E4A09C0009D4B9 /* ScreenAddViewController.swift */; };
+		1358353028E4A0C40009D4B9 /* ScreenSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358352F28E4A0C40009D4B9 /* ScreenSearchViewController.swift */; };
+		1358353228E4A0DE0009D4B9 /* ScreenFavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358353128E4A0DE0009D4B9 /* ScreenFavoritesViewController.swift */; };
+		1358353428E515B80009D4B9 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358353328E515B80009D4B9 /* CustomSegmentedControl.swift */; };
+		1358353A28E5D3290009D4B9 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1358353928E5D3290009D4B9 /* Roboto-Regular.ttf */; };
+		1387779E28E5FB4C00E94EA1 /* SegmentedControlCategoryViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1387779D28E5FB4C00E94EA1 /* SegmentedControlCategoryViewCell.swift */; };
+		138777A028E5FC4000E94EA1 /* SegmentedControlCategoryViewModelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1387779F28E5FC4000E94EA1 /* SegmentedControlCategoryViewModelCell.swift */; };
+		138777A528E6521C00E94EA1 /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 138777A428E6521C00E94EA1 /* BebasNeue-Regular.ttf */; };
+		138777A728E653A000E94EA1 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 138777A628E653A000E94EA1 /* Roboto-Bold.ttf */; };
+		138777A928E6540700E94EA1 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 138777A828E6540700E94EA1 /* Roboto-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1358348C28DF3CC40009D4B9 /* SSBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1358348F28DF3CC40009D4B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1358349128DF3CC40009D4B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1358349328DF3CC40009D4B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1358349628DF3CC40009D4B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1358349328DF3CC40009D4B9 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		1358349828DF3CC60009D4B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1358349B28DF3CC60009D4B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1358349D28DF3CC60009D4B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,6 +69,34 @@
 		135834E428E09D070009D4B9 /* QueryFavoriteBook.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QueryFavoriteBook.graphql; sourceTree = "<group>"; };
 		135834E528E09D070009D4B9 /* QueryFavoriteBooks.graphql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QueryFavoriteBooks.graphql; sourceTree = "<group>"; };
 		135834EB28E09F7E0009D4B9 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		135834F428E0AD580009D4B9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		135834F628E0AD710009D4B9 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		135834F828E0AD7F0009D4B9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		135834FD28E0AE520009D4B9 /* FavoriteBooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBooksView.swift; sourceTree = "<group>"; };
+		135834FF28E0AE6B0009D4B9 /* FavoriteBooksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBooksCollectionViewCell.swift; sourceTree = "<group>"; };
+		1358350128E0AEAC0009D4B9 /* FavoriteBooksViewModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteBooksViewModelCell.swift; sourceTree = "<group>"; };
+		1358350328E0AEF30009D4B9 /* FavoriteAuthorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteAuthorsView.swift; sourceTree = "<group>"; };
+		1358350528E0AF2B0009D4B9 /* FavoriteAuthorsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteAuthorsCollectionViewCell.swift; sourceTree = "<group>"; };
+		1358350728E0AF420009D4B9 /* FavoriteAuthorsViewModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteAuthorsViewModelCell.swift; sourceTree = "<group>"; };
+		1358350928E0B7340009D4B9 /* AllBooksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBooksView.swift; sourceTree = "<group>"; };
+		1358350B28E0B7D20009D4B9 /* AllBooksViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBooksViewCell.swift; sourceTree = "<group>"; };
+		1358350D28E0B7E90009D4B9 /* AllBooksViewModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllBooksViewModelCell.swift; sourceTree = "<group>"; };
+		1358351028E0B8880009D4B9 /* DetailsBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsBookView.swift; sourceTree = "<group>"; };
+		1358351228E0B8A50009D4B9 /* DetailsBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsBookViewModel.swift; sourceTree = "<group>"; };
+		1358351428E0B8BA0009D4B9 /* DetailsBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsBookViewController.swift; sourceTree = "<group>"; };
+		1358351A28E0D0120009D4B9 /* InformationBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationBookView.swift; sourceTree = "<group>"; };
+		1358351C28E0D0440009D4B9 /* InformationBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationBookViewModel.swift; sourceTree = "<group>"; };
+		1358352828E32AE60009D4B9 /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
+		1358352D28E4A09C0009D4B9 /* ScreenAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenAddViewController.swift; sourceTree = "<group>"; };
+		1358352F28E4A0C40009D4B9 /* ScreenSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenSearchViewController.swift; sourceTree = "<group>"; };
+		1358353128E4A0DE0009D4B9 /* ScreenFavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenFavoritesViewController.swift; sourceTree = "<group>"; };
+		1358353328E515B80009D4B9 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		1358353928E5D3290009D4B9 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		1387779D28E5FB4C00E94EA1 /* SegmentedControlCategoryViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlCategoryViewCell.swift; sourceTree = "<group>"; };
+		1387779F28E5FC4000E94EA1 /* SegmentedControlCategoryViewModelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedControlCategoryViewModelCell.swift; sourceTree = "<group>"; };
+		138777A428E6521C00E94EA1 /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
+		138777A628E653A000E94EA1 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		138777A828E6540700E94EA1 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,22 +133,153 @@
 			isa = PBXGroup;
 			children = (
 				135834CA28DFCD600009D4B9 /* schema.json */,
-				135834EB28E09F7E0009D4B9 /* API.swift */,
-				135834DF28DFEE5B0009D4B9 /* ApolloNetwork.swift */,
 				1358348F28DF3CC40009D4B9 /* AppDelegate.swift */,
 				1358349128DF3CC40009D4B9 /* SceneDelegate.swift */,
-				1358349328DF3CC40009D4B9 /* ViewController.swift */,
-				135834E228E09D070009D4B9 /* QueryUserPicture.graphql */,
-				135834E528E09D070009D4B9 /* QueryFavoriteBooks.graphql */,
-				135834E328E09D070009D4B9 /* QueryFavoriteAuthors.graphql */,
-				135834E128E09D070009D4B9 /* QueryAllBooks.graphql */,
-				135834E428E09D070009D4B9 /* QueryFavoriteBook.graphql */,
-				1358349528DF3CC40009D4B9 /* Main.storyboard */,
+				1358350F28E0B7F30009D4B9 /* NetWorking */,
+				135834F028E0A2980009D4B9 /* Screens */,
+				138777A328E64F9E00E94EA1 /* Fonts */,
 				1358349828DF3CC60009D4B9 /* Assets.xcassets */,
 				1358349A28DF3CC60009D4B9 /* LaunchScreen.storyboard */,
 				1358349D28DF3CC60009D4B9 /* Info.plist */,
 			);
 			path = SSBook;
+			sourceTree = "<group>";
+		};
+		135834F028E0A2980009D4B9 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				1358349328DF3CC40009D4B9 /* TabBarViewController.swift */,
+				135834F328E0A2A40009D4B9 /* ScreenHome */,
+				135834F228E0A2A20009D4B9 /* ScreenDetailsBook */,
+				1358352A28E4A0150009D4B9 /* ScreenAdd */,
+				1358352B28E4A01C0009D4B9 /* ScreenSearch */,
+				1358352C28E4A01F0009D4B9 /* ScrennFavorites */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		135834F228E0A2A20009D4B9 /* ScreenDetailsBook */ = {
+			isa = PBXGroup;
+			children = (
+				135834E428E09D070009D4B9 /* QueryFavoriteBook.graphql */,
+				1358351028E0B8880009D4B9 /* DetailsBookView.swift */,
+				1358351228E0B8A50009D4B9 /* DetailsBookViewModel.swift */,
+				1358351428E0B8BA0009D4B9 /* DetailsBookViewController.swift */,
+				1358351928E0C2C50009D4B9 /* InformationBook */,
+			);
+			path = ScreenDetailsBook;
+			sourceTree = "<group>";
+		};
+		135834F328E0A2A40009D4B9 /* ScreenHome */ = {
+			isa = PBXGroup;
+			children = (
+				1358353328E515B80009D4B9 /* CustomSegmentedControl.swift */,
+				135834E228E09D070009D4B9 /* QueryUserPicture.graphql */,
+				135834F428E0AD580009D4B9 /* HomeView.swift */,
+				135834F628E0AD710009D4B9 /* HomeViewModel.swift */,
+				135834F828E0AD7F0009D4B9 /* HomeViewController.swift */,
+				135834FC28E0AD920009D4B9 /* FavoriteBooks */,
+				135834FB28E0AD8F0009D4B9 /* FavoriteAuthors */,
+				135834FA28E0AD8C0009D4B9 /* AllBooks */,
+			);
+			path = ScreenHome;
+			sourceTree = "<group>";
+		};
+		135834FA28E0AD8C0009D4B9 /* AllBooks */ = {
+			isa = PBXGroup;
+			children = (
+				135834E128E09D070009D4B9 /* QueryAllBooks.graphql */,
+				1358350928E0B7340009D4B9 /* AllBooksView.swift */,
+				1358350B28E0B7D20009D4B9 /* AllBooksViewCell.swift */,
+				1358350D28E0B7E90009D4B9 /* AllBooksViewModelCell.swift */,
+				1387779C28E5FB0F00E94EA1 /* SegmentedControlCategory */,
+			);
+			path = AllBooks;
+			sourceTree = "<group>";
+		};
+		135834FB28E0AD8F0009D4B9 /* FavoriteAuthors */ = {
+			isa = PBXGroup;
+			children = (
+				135834E328E09D070009D4B9 /* QueryFavoriteAuthors.graphql */,
+				1358350328E0AEF30009D4B9 /* FavoriteAuthorsView.swift */,
+				1358350528E0AF2B0009D4B9 /* FavoriteAuthorsCollectionViewCell.swift */,
+				1358350728E0AF420009D4B9 /* FavoriteAuthorsViewModelCell.swift */,
+			);
+			path = FavoriteAuthors;
+			sourceTree = "<group>";
+		};
+		135834FC28E0AD920009D4B9 /* FavoriteBooks */ = {
+			isa = PBXGroup;
+			children = (
+				135834E528E09D070009D4B9 /* QueryFavoriteBooks.graphql */,
+				135834FD28E0AE520009D4B9 /* FavoriteBooksView.swift */,
+				135834FF28E0AE6B0009D4B9 /* FavoriteBooksCollectionViewCell.swift */,
+				1358350128E0AEAC0009D4B9 /* FavoriteBooksViewModelCell.swift */,
+			);
+			path = FavoriteBooks;
+			sourceTree = "<group>";
+		};
+		1358350F28E0B7F30009D4B9 /* NetWorking */ = {
+			isa = PBXGroup;
+			children = (
+				135834EB28E09F7E0009D4B9 /* API.swift */,
+				135834DF28DFEE5B0009D4B9 /* ApolloNetwork.swift */,
+				1358352828E32AE60009D4B9 /* ImageProvider.swift */,
+			);
+			path = NetWorking;
+			sourceTree = "<group>";
+		};
+		1358351928E0C2C50009D4B9 /* InformationBook */ = {
+			isa = PBXGroup;
+			children = (
+				1358351A28E0D0120009D4B9 /* InformationBookView.swift */,
+				1358351C28E0D0440009D4B9 /* InformationBookViewModel.swift */,
+			);
+			path = InformationBook;
+			sourceTree = "<group>";
+		};
+		1358352A28E4A0150009D4B9 /* ScreenAdd */ = {
+			isa = PBXGroup;
+			children = (
+				1358352D28E4A09C0009D4B9 /* ScreenAddViewController.swift */,
+			);
+			path = ScreenAdd;
+			sourceTree = "<group>";
+		};
+		1358352B28E4A01C0009D4B9 /* ScreenSearch */ = {
+			isa = PBXGroup;
+			children = (
+				1358352F28E4A0C40009D4B9 /* ScreenSearchViewController.swift */,
+			);
+			path = ScreenSearch;
+			sourceTree = "<group>";
+		};
+		1358352C28E4A01F0009D4B9 /* ScrennFavorites */ = {
+			isa = PBXGroup;
+			children = (
+				1358353128E4A0DE0009D4B9 /* ScreenFavoritesViewController.swift */,
+			);
+			path = ScrennFavorites;
+			sourceTree = "<group>";
+		};
+		1387779C28E5FB0F00E94EA1 /* SegmentedControlCategory */ = {
+			isa = PBXGroup;
+			children = (
+				1387779D28E5FB4C00E94EA1 /* SegmentedControlCategoryViewCell.swift */,
+				1387779F28E5FC4000E94EA1 /* SegmentedControlCategoryViewModelCell.swift */,
+			);
+			path = SegmentedControlCategory;
+			sourceTree = "<group>";
+		};
+		138777A328E64F9E00E94EA1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				138777A828E6540700E94EA1 /* Roboto-Medium.ttf */,
+				1358353928E5D3290009D4B9 /* Roboto-Regular.ttf */,
+				138777A628E653A000E94EA1 /* Roboto-Bold.ttf */,
+				138777A428E6521C00E94EA1 /* BebasNeue-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,12 +349,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				138777A528E6521C00E94EA1 /* BebasNeue-Regular.ttf in Resources */,
 				135834E628E09D070009D4B9 /* QueryAllBooks.graphql in Resources */,
 				1358349C28DF3CC60009D4B9 /* LaunchScreen.storyboard in Resources */,
+				1358353A28E5D3290009D4B9 /* Roboto-Regular.ttf in Resources */,
+				138777A728E653A000E94EA1 /* Roboto-Bold.ttf in Resources */,
 				135834E828E09D070009D4B9 /* QueryFavoriteAuthors.graphql in Resources */,
 				135834EA28E09D070009D4B9 /* QueryFavoriteBooks.graphql in Resources */,
 				1358349928DF3CC60009D4B9 /* Assets.xcassets in Resources */,
-				1358349728DF3CC40009D4B9 /* Main.storyboard in Resources */,
+				138777A928E6540700E94EA1 /* Roboto-Medium.ttf in Resources */,
 				135834E728E09D070009D4B9 /* QueryUserPicture.graphql in Resources */,
 				135834CB28DFCD600009D4B9 /* schema.json in Resources */,
 				135834E928E09D070009D4B9 /* QueryFavoriteBook.graphql in Resources */,
@@ -204,9 +392,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1358349428DF3CC40009D4B9 /* ViewController.swift in Sources */,
+				1358353228E4A0DE0009D4B9 /* ScreenFavoritesViewController.swift in Sources */,
+				1358352E28E4A09C0009D4B9 /* ScreenAddViewController.swift in Sources */,
+				1358351D28E0D0440009D4B9 /* InformationBookViewModel.swift in Sources */,
+				1358350C28E0B7D20009D4B9 /* AllBooksViewCell.swift in Sources */,
+				135834FE28E0AE520009D4B9 /* FavoriteBooksView.swift in Sources */,
+				1358350028E0AE6B0009D4B9 /* FavoriteBooksCollectionViewCell.swift in Sources */,
+				1358350428E0AEF30009D4B9 /* FavoriteAuthorsView.swift in Sources */,
+				1358349428DF3CC40009D4B9 /* TabBarViewController.swift in Sources */,
+				138777A028E5FC4000E94EA1 /* SegmentedControlCategoryViewModelCell.swift in Sources */,
+				1358350228E0AEAC0009D4B9 /* FavoriteBooksViewModelCell.swift in Sources */,
+				1358351528E0B8BA0009D4B9 /* DetailsBookViewController.swift in Sources */,
+				1358350628E0AF2B0009D4B9 /* FavoriteAuthorsCollectionViewCell.swift in Sources */,
 				135834E028DFEE5B0009D4B9 /* ApolloNetwork.swift in Sources */,
+				1358353028E4A0C40009D4B9 /* ScreenSearchViewController.swift in Sources */,
+				1358350828E0AF420009D4B9 /* FavoriteAuthorsViewModelCell.swift in Sources */,
+				1358350A28E0B7340009D4B9 /* AllBooksView.swift in Sources */,
+				135834F728E0AD710009D4B9 /* HomeViewModel.swift in Sources */,
+				1358352928E32AE60009D4B9 /* ImageProvider.swift in Sources */,
+				135834F928E0AD7F0009D4B9 /* HomeViewController.swift in Sources */,
 				1358349028DF3CC40009D4B9 /* AppDelegate.swift in Sources */,
+				135834F528E0AD580009D4B9 /* HomeView.swift in Sources */,
+				1358351B28E0D0120009D4B9 /* InformationBookView.swift in Sources */,
+				1387779E28E5FB4C00E94EA1 /* SegmentedControlCategoryViewCell.swift in Sources */,
+				1358351128E0B8880009D4B9 /* DetailsBookView.swift in Sources */,
+				1358350E28E0B7E90009D4B9 /* AllBooksViewModelCell.swift in Sources */,
+				1358353428E515B80009D4B9 /* CustomSegmentedControl.swift in Sources */,
+				1358351328E0B8A50009D4B9 /* DetailsBookViewModel.swift in Sources */,
 				1358349228DF3CC40009D4B9 /* SceneDelegate.swift in Sources */,
 				135834EC28E09F7E0009D4B9 /* API.swift in Sources */,
 			);
@@ -215,14 +427,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1358349528DF3CC40009D4B9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1358349628DF3CC40009D4B9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1358349A28DF3CC60009D4B9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -360,7 +564,6 @@
 				INFOPLIST_FILE = SSBook/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -388,7 +591,6 @@
 				INFOPLIST_FILE = SSBook/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
