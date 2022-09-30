@@ -20,14 +20,10 @@ class HomeViewController: UIViewController {
   required init?(coder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
   }
-  override func viewWillLayoutSubviews() {
-    super.viewWillLayoutSubviews()
-  }
   
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
     homeView.favoriteAuthorsView.roundCorners(corners: [.topLeft], radius: 32)
-    homeView.customSegmented.stack.roundCorners(corners: [.bottomRight], radius: 32)
   }
   
   override func loadView() {
@@ -186,6 +182,7 @@ extension HomeViewController: UICollectionViewDataSource {
       let viewModel = viewModel.cellForRowFavoriteBooks(at: indexPath)
       cell.configure(viewModel: viewModel)
       cell.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
+      
       
       return cell
       

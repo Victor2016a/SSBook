@@ -30,6 +30,7 @@ class FavoriteBooksView: UIView {
   let favoriteBooksCollectionView: UICollectionView = {
     let layout = UICollectionViewFlowLayout()
     layout.scrollDirection = .horizontal
+    layout.minimumLineSpacing = 20
     let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
     collection.translatesAutoresizingMaskIntoConstraints = false
     collection.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)

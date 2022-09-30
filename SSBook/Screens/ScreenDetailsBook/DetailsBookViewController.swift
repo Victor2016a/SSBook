@@ -12,6 +12,7 @@ class DetailsBookViewController: UIViewController {
   let detailsBookView = DetailsBookView()
   let viewModel: DetailsBookViewModel
   let idBook: String
+  var isMakeLinearGradient: Bool = false
   
   init(viewModel: DetailsBookViewModel,
        idBook: String) {
@@ -28,7 +29,9 @@ class DetailsBookViewController: UIViewController {
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
     detailsBookView.stackView.roundCorners(corners: [.topLeft], radius: 32)
-    setupLinearGradient()
+    if !isMakeLinearGradient {
+      setupLinearGradient()
+    }
   }
   
   override func loadView() {
@@ -74,10 +77,22 @@ class DetailsBookViewController: UIViewController {
   }
   
   @objc private func changeFavoriteImage() {
+    isMakeLinearGradient = true
     
-    detailsBookView.informationBookView.bookFavoriteMarkButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+    let buttonTitleText = detailsBookView.informationBookView.bookFavoriteMarkButton.titleLabel!.text
     
-    detailsBookView.informationBookView.bookFavoriteMarkButton.tintColor = UIColor(red: 160/255, green: 118/255, blue: 242/255, alpha: 1)
+    if buttonTitleText == "heart" {
+      
+      detailsBookView.informationBookView.bookFavoriteMarkButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+      detailsBookView.informationBookView.bookFavoriteMarkButton.titleLabel?.text = "heart.fill"
+      detailsBookView.informationBookView.bookFavoriteMarkButton.tintColor = UIColor(red: 160/255, green: 118/255, blue: 242/255, alpha: 1)
+      
+    } else {
+      
+      detailsBookView.informationBookView.bookFavoriteMarkButton.setImage(UIImage(systemName: "heart"), for: .normal)
+      detailsBookView.informationBookView.bookFavoriteMarkButton.titleLabel?.text = "heart"
+      detailsBookView.informationBookView.bookFavoriteMarkButton.tintColor = UIColor(red: 85/255, green: 85/255, blue: 85/255, alpha: 1)
+    }
   }
   
   private func loadBookDetails() {

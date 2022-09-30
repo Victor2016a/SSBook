@@ -38,6 +38,7 @@ class InformationBookView: UIView {
   let bookFavoriteMarkButton: UIButton = {
     let button = UIButton()
     button.setImage(UIImage(systemName: "heart"), for: .normal)
+    button.titleLabel?.text = "heart"
     button.tintColor = UIColor(red: 85/255, green: 85/255, blue: 85/255, alpha: 1)
     button.frame.size = CGSize(width: 20, height: 18.35)
     button.translatesAutoresizingMaskIntoConstraints = false
