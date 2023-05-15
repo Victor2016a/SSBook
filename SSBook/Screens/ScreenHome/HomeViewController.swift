@@ -9,8 +9,8 @@ import UIKit
 import AVFoundation
 
 class HomeViewController: UIViewController {
-  private let homeView = HomeView()
-  private let viewModel: HomeViewModel
+  let homeView = HomeView()
+  let viewModel: HomeViewModel
   
   init(viewModel: HomeViewModel) {
     self.viewModel = viewModel
@@ -43,9 +43,9 @@ class HomeViewController: UIViewController {
     
     let text = NSMutableAttributedString()
     text.append(NSAttributedString(string: "SS",
-                                   attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 85/255, green: 85/255, blue: 85/255, alpha: 1)]));
+                                   attributes: [NSAttributedString.Key.foregroundColor: UIColor.ssBookColorGray]));
     text.append(NSAttributedString(string: "BOOK",
-                                   attributes: [NSAttributedString.Key.foregroundColor: UIColor(red: 160/255, green: 118/255, blue: 242/255, alpha: 1)]))
+                                   attributes: [NSAttributedString.Key.foregroundColor: UIColor.ssBookPurple]))
     
     label.font = UIFont(name: "BebasNeue-Regular", size: 40)
     label.attributedText = text
@@ -80,7 +80,6 @@ class HomeViewController: UIViewController {
   
   private func setupCategoriesBook(index: Int? = nil) {
     let categoriesArray = ["Todos","Romance","Aventura","Comédia","Terror", "Tecnologia", "Viagem"]
-    viewModel.categoriesBook = categoriesArray
     
     categoriesArray.enumerated().forEach { [weak self] in
       let stackViewCell = SegmentedControlCategoryViewCell()
@@ -99,9 +98,26 @@ class HomeViewController: UIViewController {
     homeView.allBooksView.categoryStackView.arrangedSubviews.forEach { $0.removeFromSuperview()}
     
     setupCategoriesBook(index: index)
-    
   }
   
+  private func setupUserProfileButton(image: UIImage) -> UIButton {
+    
+    let userProfileButton = UIButton(type: .custom)
+    userProfileButton.imageView?.contentMode = .scaleAspectFill
+    userProfileButton.clipsToBounds = true
+    userProfileButton.addTarget(self,
+                                action: #selector(self.profilePictureTapped),
+                                for: .touchUpInside)
+    userProfileButton.setImage(image, for: .normal)
+    userProfileButton.frame = CGRect(x: 0, y: 0, width: 32, height: 32)
+    userProfileButton.widthAnchor.constraint(equalToConstant: 32).isActive = true
+    userProfileButton.heightAnchor.constraint(equalToConstant: 32).isActive = true
+    userProfileButton.layer.masksToBounds = true
+    let width = userProfileButton.bounds.width
+    userProfileButton.layer.cornerRadius = width/2
+    
+    return userProfileButton
+  }
   
   private func loadScreenData() {
     ApolloNetwork.shared.apollo.fetch(query: UserPictureQuery()) { [weak self] result in
@@ -111,19 +127,12 @@ class HomeViewController: UIViewController {
         guard let url = URL(string: userData.data?.userPicture ?? "") else { return }
         ImageProvider.shared.fecthImage(url: url) { [weak self] image in
           
-          let userProfileButton = UIButton(type: .custom)
-            userProfileButton.imageView?.contentMode = .scaleAspectFill
-            userProfileButton.clipsToBounds = true
-          userProfileButton.addTarget(self, action: #selector(self?.profilePictureTapped), for: .touchUpInside)
-            userProfileButton.setImage(image, for: .normal)
-            userProfileButton.frame = CGRect(x: 0, y: 0, width: 32, height: 32)
-
-
-          userProfileButton.widthAnchor.constraint(equalToConstant: 32).isActive = true
-          userProfileButton.heightAnchor.constraint(equalToConstant: 32).isActive = true
-          userProfileButton.layer.masksToBounds = true
-          let width = userProfileButton.bounds.width
-          userProfileButton.layer.cornerRadius = width/2
+          guard let image = image else { return }
+          
+          let userProfileButton = self?.setupUserProfileButton(image: image)
+          
+          guard let userProfileButton = userProfileButton else { return }
+          
           let barButtonItem = UIBarButtonItem(customView: userProfileButton)
           
           DispatchQueue.main.async {
@@ -134,7 +143,6 @@ class HomeViewController: UIViewController {
       case.failure(let error):
         print(error.localizedDescription)
       }
-      
     }
     
     viewModel.fetchFavoriteBooksData { [weak self] result in
@@ -157,75 +165,5 @@ class HomeViewController: UIViewController {
   
   @objc private func profilePictureTapped() {
     
-  }
-}
-
-extension HomeViewController: UICollectionViewDataSource {
-  
-  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    
-    let favoriteBooksCollection = homeView.favoriteBooksView.favoriteBooksCollectionView
-    
-    if collectionView == favoriteBooksCollection {
-      return viewModel.favoriteBooksNumberOfRows(section: section)
-    }
-    return viewModel.favoriteAuthorsNumberOfRows(section: section)
-  }
-  
-  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let favoriteBooksCollection = homeView.favoriteBooksView.favoriteBooksCollectionView
-    
-    if collectionView == favoriteBooksCollection {
-      
-      guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FavoriteBooksCollectionViewCell.identifier, for: indexPath) as? FavoriteBooksCollectionViewCell else { return .init() }
-      
-      let viewModel = viewModel.cellForRowFavoriteBooks(at: indexPath)
-      cell.configure(viewModel: viewModel)
-      cell.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
-      
-      
-      return cell
-      
-    } else {
-      
-      guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FavoriteAuthorsCollectionViewCell.identifier, for: indexPath) as? FavoriteAuthorsCollectionViewCell else { return .init() }
-      
-      let viewModel = viewModel.cellForRowFavoriteAuthors(at: indexPath)
-      cell.configure(viewModel: viewModel)
-      cell.backgroundColor = .white
-      cell.layer.masksToBounds = true
-      cell.layer.borderColor = UIColor(red: 224/255, green: 224/255, blue: 224/255, alpha: 1).cgColor
-      cell.layer.borderWidth = 1
-      cell.layer.cornerRadius = 8
-      return cell
-    }
-  }
-}
-
-extension HomeViewController: UICollectionViewDelegateFlowLayout {
-  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    
-    let favoriteBooksCollection = homeView.favoriteBooksView.favoriteBooksCollectionView
-    
-    if collectionView == favoriteBooksCollection {
-      return CGSize(width: 136, height: 282)
-    } else {
-      return CGSize(width: 248, height: 69)
-    }
-  }
-}
-
-extension HomeViewController: UICollectionViewDelegate {
-  
-  func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    let favoriteBooksCollection = homeView.favoriteBooksView.favoriteBooksCollectionView
-    
-    if collectionView == favoriteBooksCollection {
-      let detailsBookViewModel = DetailsBookViewModel(detailsBookModel: FavoriteBookQuery.Data.Book.init(cover: "", name: "", author: FavoriteBookQuery.Data.Book.Author.init(name: ""), description: ""))
-      
-      let idBook = viewModel.idCellFavoriteBook(at: indexPath)
-      
-      navigationController?.pushViewController(DetailsBookViewController(viewModel: detailsBookViewModel, idBook: idBook), animated: true)
-    }
   }
 }

@@ -11,13 +11,12 @@ class CustomSegmentedControl: UIView {
   private var buttonTitles: [String]!
   private var buttons: [UIButton] = []
   private var selectorView: UIView!
-  var textColor: UIColor = UIColor(red: 85/255, green: 85/255, blue: 85/255, alpha: 1)
-  var selectorViewColor: UIColor = UIColor(red: 160/255, green: 118/255, blue: 242/255, alpha: 1)
-  var selectorTextColor: UIColor = UIColor(red: 85/255, green: 85/255, blue: 85/255, alpha: 1)
+  var textColor: UIColor = .ssBookColorGray
+  var selectorViewColor: UIColor = .ssBookPurple
+  var selectorTextColor: UIColor = .ssBookColorGray
   var stack = UIStackView()
   
   private func configStackView() {
-    
     stack = UIStackView(arrangedSubviews: buttons)
     stack.axis = .horizontal
     stack.alignment = .fill

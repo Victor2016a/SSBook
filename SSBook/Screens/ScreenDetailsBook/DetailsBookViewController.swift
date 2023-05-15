@@ -85,13 +85,13 @@ class DetailsBookViewController: UIViewController {
       
       detailsBookView.informationBookView.bookFavoriteMarkButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
       detailsBookView.informationBookView.bookFavoriteMarkButton.titleLabel?.text = "heart.fill"
-      detailsBookView.informationBookView.bookFavoriteMarkButton.tintColor = UIColor(red: 160/255, green: 118/255, blue: 242/255, alpha: 1)
+      detailsBookView.informationBookView.bookFavoriteMarkButton.tintColor = .ssBookPurple
       
     } else {
       
       detailsBookView.informationBookView.bookFavoriteMarkButton.setImage(UIImage(systemName: "heart"), for: .normal)
       detailsBookView.informationBookView.bookFavoriteMarkButton.titleLabel?.text = "heart"
-      detailsBookView.informationBookView.bookFavoriteMarkButton.tintColor = UIColor(red: 85/255, green: 85/255, blue: 85/255, alpha: 1)
+      detailsBookView.informationBookView.bookFavoriteMarkButton.tintColor = .ssBookColorGray
     }
   }
   

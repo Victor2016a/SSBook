@@ -13,19 +13,16 @@ class HomeViewModel {
   var favoriteBooksModel: [FavoriteBooksQuery.Data.FavoriteBook]
   var favoriteAuthorsModel: [FavoriteAuthorsQuery.Data.FavoriteAuthor]
   var allBooksModel: [AllBooksQuery.Data.AllBook]
-  var categoriesBook: [String]
   
   init(userModel: String,
        favoriteBooksModel: [FavoriteBooksQuery.Data.FavoriteBook],
        favoriteAuthorsModel: [FavoriteAuthorsQuery.Data.FavoriteAuthor],
-       allBooksModel: [AllBooksQuery.Data.AllBook],
-       categoriesBook: [String]) {
+       allBooksModel: [AllBooksQuery.Data.AllBook]) {
     
     self.userModel = userModel
     self.favoriteBooksModel = favoriteBooksModel
     self.favoriteAuthorsModel = favoriteAuthorsModel
     self.allBooksModel = allBooksModel
-    self.categoriesBook = categoriesBook
   }
   
   func fetchUserData(complention: @escaping (Result<String, Error>) -> Void) {
@@ -39,7 +36,9 @@ class HomeViewModel {
   }
   }
   
-  func fetchFavoriteBooksData(complention: @escaping (Result<[FavoriteBooksQuery.Data.FavoriteBook], Error>) -> Void) {
+  typealias favoriteBook = FavoriteBooksQuery.Data.FavoriteBook
+  
+  func fetchFavoriteBooksData(complention: @escaping (Result<[favoriteBook], Error>) -> Void) {
     
     ApolloNetwork.shared.apollo.fetch(query: FavoriteBooksQuery()) { result in
     switch result {
@@ -52,7 +51,9 @@ class HomeViewModel {
   }
   }
   
-  func fetchFavoriteAuthorsData(complention: @escaping (Result<[FavoriteAuthorsQuery.Data.FavoriteAuthor], Error>) -> Void) {
+  typealias favoriteAuthor = FavoriteAuthorsQuery.Data.FavoriteAuthor
+  
+  func fetchFavoriteAuthorsData(complention: @escaping (Result<[favoriteAuthor], Error>) -> Void) {
     
     ApolloNetwork.shared.apollo.fetch(query: FavoriteAuthorsQuery()) { result in
     switch result {
@@ -65,7 +66,9 @@ class HomeViewModel {
   }
   }
   
-  func fetchAllBooksData(complention: @escaping (Result<[AllBooksQuery.Data.AllBook], Error>) -> Void) {
+  typealias allBook = AllBooksQuery.Data.AllBook
+  
+  func fetchAllBooksData(complention: @escaping (Result<[allBook], Error>) -> Void) {
     
     ApolloNetwork.shared.apollo.fetch(query: AllBooksQuery()) { result in
     switch result {
@@ -118,12 +121,5 @@ class HomeViewModel {
     return .init(bookImageName: allBooks.cover,
                  bookTitle: allBooks.name,
                  bookAuthorName: allBooks.author.name)
-  }
-  
-  func cellForRowCategoryBook(at row: Int) -> SegmentedControlCategoryViewModelCell {
-    
-    let categoryBook = categoriesBook[row]
-    
-    return .init(categoryBook: categoryBook)
   }
 }

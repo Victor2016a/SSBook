@@ -20,18 +20,18 @@ class SegmentedControlCategoryViewCell: UIView {
   
   let categoryBookButton: UIButton = {
     let button = UIButton()
-    button.tintColor = UIColor(red: 85/255, green: 85/255, blue: 85/255, alpha: 1)
+    button.tintColor = .ssBookColorGray
     button.titleLabel?.font = UIFont(name: "Roboto-Medium", size: 14)
-    button.setTitleColor(UIColor(red: 85/255, green: 85/255, blue: 85/255, alpha: 1), for: .normal)
+    button.setTitleColor(.ssBookColorGray, for: .normal)
     button.translatesAutoresizingMaskIntoConstraints = false
     return button
   }()
   
   private func changeColors() {
     categoryBookButton.setTitleColor(.white, for: .normal)
-    categoryBookButton.backgroundColor = UIColor(red: 160/255, green: 118/255, blue: 242/255, alpha: 1)
-    backgroundColor = UIColor(red: 160/255, green: 118/255, blue: 242/255, alpha: 1)
-    layer.borderColor = UIColor(red: 160/255, green: 118/255, blue: 242/255, alpha: 1).cgColor
+    categoryBookButton.backgroundColor = .ssBookPurple
+    backgroundColor = .ssBookPurple
+    layer.borderColor = UIColor.ssBookPurple.cgColor
   }
   
   override init(frame: CGRect) {
@@ -39,7 +39,7 @@ class SegmentedControlCategoryViewCell: UIView {
     layer.masksToBounds = true
     layer.cornerRadius = 16
     layer.borderWidth = 1.0
-    layer.borderColor = UIColor(red: 85/255, green: 85/255, blue: 85/255, alpha: 1).cgColor
+    layer.borderColor = UIColor.ssBookColorGray.cgColor
     setupCellView()
     setupConstraints()
   }

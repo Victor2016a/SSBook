@@ -12,7 +12,7 @@ class FavoriteAuthorsView: UIView {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
     label.font = UIFont(name: "Roboto-Bold", size: 20)
-    label.textColor = UIColor(red: 85/255, green: 85/255, blue: 85/255, alpha: 1)
+    label.textColor = .ssBookColorGray
     label.text = "Autores favoritos"
     return label
   }()
@@ -22,7 +22,7 @@ class FavoriteAuthorsView: UIView {
     button.translatesAutoresizingMaskIntoConstraints = false
     button.setTitle("ver todos", for: .normal)
     button.titleLabel?.font = UIFont(name: "Roboto-Bold", size: 14)
-    button.setTitleColor(UIColor(red: 160/255, green: 118/255, blue: 242/255, alpha: 1), for: .normal)
+    button.setTitleColor(.ssBookPurple, for: .normal)
     return button
   }()
   

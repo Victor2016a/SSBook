@@ -10,33 +10,45 @@ import UIKit
 
 class TabBarViewController: UIViewController {
   
-  let tabBarVc = UITabBarController()
-  let arrayViews = [UINavigationController(rootViewController:
-                                            HomeViewController(viewModel: HomeViewModel(userModel: "", favoriteBooksModel: [], favoriteAuthorsModel: [], allBooksModel: [], categoriesBook: []))),
-                    
-                    UINavigationController(rootViewController: ScreenAddViewController()),
-                    
-                    UINavigationController(rootViewController: ScreenSearchViewController()),
-                    
-                    UINavigationController(rootViewController: ScreenFavoritesViewController())]
-  
-  
-  let arrayNamesItens = ["Início", "Adicionar", "Buscar", "Favoritos"]
-  let itensTabBarNames = ["house.fill", "plus.circle","magnifyingglass", "heart.fill"]
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
+  func setupView() {
     view.backgroundColor = UIColor(red: 147/255, green: 108/255, blue: 223/255, alpha: 1)
   }
   
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(true)
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    setupView()
+  }
+  
+  func setupTabBar() {
+    let tabBarVc = UITabBarController()
+    let homeViewModel = HomeViewModel(userModel: "",
+                                      favoriteBooksModel: [],
+                                      favoriteAuthorsModel: [],
+                                      allBooksModel: [])
+    
+    let arrayViews = [UINavigationController(rootViewController:
+                                              HomeViewController(
+                                                viewModel: homeViewModel)),
+                      
+                      UINavigationController(rootViewController:
+                                              ScreenAddViewController()),
+                      
+                      UINavigationController(rootViewController:
+                                              ScreenSearchViewController()),
+                      
+                      UINavigationController(rootViewController:
+                                              ScreenFavoritesViewController())]
+    
+    
+    let arrayNamesItens = ["Início", "Adicionar", "Buscar", "Favoritos"]
+    let itensTabBarNames = ["house.fill", "plus.circle","magnifyingglass", "heart.fill"]
+    
     tabBarVc.setViewControllers(arrayViews, animated: false)
     tabBarVc.modalPresentationStyle = .fullScreen
     tabBarVc.tabBar.backgroundColor = .white
     tabBarVc.tabBar.isTranslucent = false
     tabBarVc.tabBar.barTintColor = .white
-    tabBarVc.tabBar.tintColor = UIColor(red: 160/255, green: 118/255, blue: 242/255, alpha: 1)
+    tabBarVc.tabBar.tintColor = .ssBookPurple
     
     for x in 0..<arrayNamesItens.count{
       arrayViews[x].title = arrayNamesItens[x]
@@ -48,7 +60,11 @@ class TabBarViewController: UIViewController {
       items[x].image = UIImage(systemName: itensTabBarNames[x])
     }
     present(tabBarVc, animated: false, completion: nil)
-    
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(true)
+    setupTabBar()
   }
 }
 

@@ -13,7 +13,11 @@ class HomeView: UIView {
   let allBooksView = AllBooksView()
   
   let customSegmented: CustomSegmentedControl = {
-    let customSegmented = CustomSegmentedControl(frame: .zero, buttonTitle: ["Meus livros", "Emprestados"])
+    let customSegmented = CustomSegmentedControl(frame: .zero,
+                                                 buttonTitle: [
+                                                  "Meus livros",
+                                                  "Emprestados"])
+    
     customSegmented.translatesAutoresizingMaskIntoConstraints = false
     return customSegmented
   }()
@@ -32,7 +36,7 @@ class HomeView: UIView {
   
   let stackView: UIStackView = {
     let stackView = UIStackView()
-    stackView.backgroundColor =  UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
+    stackView.backgroundColor = .ssBookBackgroundGray
     stackView.axis = .vertical
     stackView.distribution = .fill
     stackView.translatesAutoresizingMaskIntoConstraints = false

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1343485628F5AAAE0052A591 /* HomeViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1343485528F5AAAE0052A591 /* HomeViewModelTest.swift */; };
+		1343485D28F5AB060052A591 /* ImageProviderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1343485C28F5AB060052A591 /* ImageProviderTest.swift */; };
 		1358349028DF3CC40009D4B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358348F28DF3CC40009D4B9 /* AppDelegate.swift */; };
 		1358349228DF3CC40009D4B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358349128DF3CC40009D4B9 /* SceneDelegate.swift */; };
 		1358349428DF3CC40009D4B9 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1358349328DF3CC40009D4B9 /* TabBarViewController.swift */; };
@@ -51,9 +53,27 @@
 		138777A528E6521C00E94EA1 /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 138777A428E6521C00E94EA1 /* BebasNeue-Regular.ttf */; };
 		138777A728E653A000E94EA1 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 138777A628E653A000E94EA1 /* Roboto-Bold.ttf */; };
 		138777A928E6540700E94EA1 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 138777A828E6540700E94EA1 /* Roboto-Medium.ttf */; };
+		13D8D0B228F8693300EB9984 /* NavigationHomeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D8D0B128F8693300EB9984 /* NavigationHomeTest.swift */; };
+		13D8D0B528F9C19500EB9984 /* SSBOOK_Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D8D0B428F9C19500EB9984 /* SSBOOK_Colors.swift */; };
+		13D8D0B828FEDEF500EB9984 /* CollectionDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D8D0B728FEDEF500EB9984 /* CollectionDataSource.swift */; };
+		13D8D0BA28FEDF2000EB9984 /* CollectionDelegateFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D8D0B928FEDF2000EB9984 /* CollectionDelegateFlowLayout.swift */; };
+		13D8D0BC28FEDF3200EB9984 /* CollectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13D8D0BB28FEDF3200EB9984 /* CollectionDelegate.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		1343485728F5AAAE0052A591 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1358348428DF3CC40009D4B9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1358348B28DF3CC40009D4B9;
+			remoteInfo = SSBook;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		1343485328F5AAAE0052A591 /* SSBookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SSBookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1343485528F5AAAE0052A591 /* HomeViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTest.swift; sourceTree = "<group>"; };
+		1343485C28F5AB060052A591 /* ImageProviderTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProviderTest.swift; sourceTree = "<group>"; };
 		1358348C28DF3CC40009D4B9 /* SSBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SSBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1358348F28DF3CC40009D4B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1358349128DF3CC40009D4B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,9 +117,21 @@
 		138777A428E6521C00E94EA1 /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
 		138777A628E653A000E94EA1 /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		138777A828E6540700E94EA1 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		13D8D0B128F8693300EB9984 /* NavigationHomeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHomeTest.swift; sourceTree = "<group>"; };
+		13D8D0B428F9C19500EB9984 /* SSBOOK_Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSBOOK_Colors.swift; sourceTree = "<group>"; };
+		13D8D0B728FEDEF500EB9984 /* CollectionDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDataSource.swift; sourceTree = "<group>"; };
+		13D8D0B928FEDF2000EB9984 /* CollectionDelegateFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDelegateFlowLayout.swift; sourceTree = "<group>"; };
+		13D8D0BB28FEDF3200EB9984 /* CollectionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1343485028F5AAAE0052A591 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1358348928DF3CC40009D4B9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -113,10 +145,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1343485428F5AAAE0052A591 /* SSBookTests */ = {
+			isa = PBXGroup;
+			children = (
+				1343485528F5AAAE0052A591 /* HomeViewModelTest.swift */,
+				1343485C28F5AB060052A591 /* ImageProviderTest.swift */,
+				13D8D0B128F8693300EB9984 /* NavigationHomeTest.swift */,
+			);
+			path = SSBookTests;
+			sourceTree = "<group>";
+		};
 		1358348328DF3CC40009D4B9 = {
 			isa = PBXGroup;
 			children = (
 				1358348E28DF3CC40009D4B9 /* SSBook */,
+				1343485428F5AAAE0052A591 /* SSBookTests */,
 				1358348D28DF3CC40009D4B9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				1358348C28DF3CC40009D4B9 /* SSBook.app */,
+				1343485328F5AAAE0052A591 /* SSBookTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,6 +182,7 @@
 				1358350F28E0B7F30009D4B9 /* NetWorking */,
 				135834F028E0A2980009D4B9 /* Screens */,
 				138777A328E64F9E00E94EA1 /* Fonts */,
+				13D8D0B328F9C16400EB9984 /* Colors */,
 				1358349828DF3CC60009D4B9 /* Assets.xcassets */,
 				1358349A28DF3CC60009D4B9 /* LaunchScreen.storyboard */,
 				1358349D28DF3CC60009D4B9 /* Info.plist */,
@@ -178,6 +223,7 @@
 				135834F428E0AD580009D4B9 /* HomeView.swift */,
 				135834F628E0AD710009D4B9 /* HomeViewModel.swift */,
 				135834F828E0AD7F0009D4B9 /* HomeViewController.swift */,
+				13D8D0B628FEDE1400EB9984 /* HomeViewControllerExtensions */,
 				135834FC28E0AD920009D4B9 /* FavoriteBooks */,
 				135834FB28E0AD8F0009D4B9 /* FavoriteAuthors */,
 				135834FA28E0AD8C0009D4B9 /* AllBooks */,
@@ -282,9 +328,45 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		13D8D0B328F9C16400EB9984 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				13D8D0B428F9C19500EB9984 /* SSBOOK_Colors.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		13D8D0B628FEDE1400EB9984 /* HomeViewControllerExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				13D8D0B728FEDEF500EB9984 /* CollectionDataSource.swift */,
+				13D8D0B928FEDF2000EB9984 /* CollectionDelegateFlowLayout.swift */,
+				13D8D0BB28FEDF3200EB9984 /* CollectionDelegate.swift */,
+			);
+			path = HomeViewControllerExtensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1343485228F5AAAE0052A591 /* SSBookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1343485B28F5AAAE0052A591 /* Build configuration list for PBXNativeTarget "SSBookTests" */;
+			buildPhases = (
+				1343484F28F5AAAE0052A591 /* Sources */,
+				1343485028F5AAAE0052A591 /* Frameworks */,
+				1343485128F5AAAE0052A591 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1343485828F5AAAE0052A591 /* PBXTargetDependency */,
+			);
+			name = SSBookTests;
+			productName = SSBookTests;
+			productReference = 1343485328F5AAAE0052A591 /* SSBookTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		1358348B28DF3CC40009D4B9 /* SSBook */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 135834A028DF3CC60009D4B9 /* Build configuration list for PBXNativeTarget "SSBook" */;
@@ -315,9 +397,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
+				LastSwiftUpdateCheck = 1400;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
+					1343485228F5AAAE0052A591 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = 1358348B28DF3CC40009D4B9;
+					};
 					1358348B28DF3CC40009D4B9 = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
@@ -340,11 +426,19 @@
 			projectRoot = "";
 			targets = (
 				1358348B28DF3CC40009D4B9 /* SSBook */,
+				1343485228F5AAAE0052A591 /* SSBookTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1343485128F5AAAE0052A591 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1358348A28DF3CC40009D4B9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -388,12 +482,24 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1343484F28F5AAAE0052A591 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13D8D0B228F8693300EB9984 /* NavigationHomeTest.swift in Sources */,
+				1343485D28F5AB060052A591 /* ImageProviderTest.swift in Sources */,
+				1343485628F5AAAE0052A591 /* HomeViewModelTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1358348828DF3CC40009D4B9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1358353228E4A0DE0009D4B9 /* ScreenFavoritesViewController.swift in Sources */,
 				1358352E28E4A09C0009D4B9 /* ScreenAddViewController.swift in Sources */,
+				13D8D0BC28FEDF3200EB9984 /* CollectionDelegate.swift in Sources */,
+				13D8D0BA28FEDF2000EB9984 /* CollectionDelegateFlowLayout.swift in Sources */,
 				1358351D28E0D0440009D4B9 /* InformationBookViewModel.swift in Sources */,
 				1358350C28E0B7D20009D4B9 /* AllBooksViewCell.swift in Sources */,
 				135834FE28E0AE520009D4B9 /* FavoriteBooksView.swift in Sources */,
@@ -412,9 +518,11 @@
 				1358352928E32AE60009D4B9 /* ImageProvider.swift in Sources */,
 				135834F928E0AD7F0009D4B9 /* HomeViewController.swift in Sources */,
 				1358349028DF3CC40009D4B9 /* AppDelegate.swift in Sources */,
+				13D8D0B528F9C19500EB9984 /* SSBOOK_Colors.swift in Sources */,
 				135834F528E0AD580009D4B9 /* HomeView.swift in Sources */,
 				1358351B28E0D0120009D4B9 /* InformationBookView.swift in Sources */,
 				1387779E28E5FB4C00E94EA1 /* SegmentedControlCategoryViewCell.swift in Sources */,
+				13D8D0B828FEDEF500EB9984 /* CollectionDataSource.swift in Sources */,
 				1358351128E0B8880009D4B9 /* DetailsBookView.swift in Sources */,
 				1358350E28E0B7E90009D4B9 /* AllBooksViewModelCell.swift in Sources */,
 				1358353428E515B80009D4B9 /* CustomSegmentedControl.swift in Sources */,
@@ -425,6 +533,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1343485828F5AAAE0052A591 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1358348B28DF3CC40009D4B9 /* SSBook */;
+			targetProxy = 1343485728F5AAAE0052A591 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1358349A28DF3CC60009D4B9 /* LaunchScreen.storyboard */ = {
@@ -438,6 +554,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1343485928F5AAAE0052A591 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 63T8PTV9GL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = victor.SSBookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SSBook.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SSBook";
+			};
+			name = Debug;
+		};
+		1343485A28F5AAAE0052A591 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 63T8PTV9GL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = victor.SSBookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SSBook.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SSBook";
+			};
+			name = Release;
+		};
 		1358349E28DF3CC60009D4B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -566,6 +722,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -593,6 +750,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -609,6 +767,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1343485B28F5AAAE0052A591 /* Build configuration list for PBXNativeTarget "SSBookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1343485928F5AAAE0052A591 /* Debug */,
+				1343485A28F5AAAE0052A591 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1358348728DF3CC40009D4B9 /* Build configuration list for PBXProject "SSBook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

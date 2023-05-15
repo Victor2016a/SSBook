@@ -13,7 +13,7 @@ class AllBooksView: UIView {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
     label.font = UIFont(name: "Roboto-Bold", size: 20)
-    label.textColor = UIColor(red: 85/255, green: 85/255, blue: 85/255, alpha: 1)
+    label.textColor = .ssBookColorGray
     label.text = "Biblioteca"
     return label
   }()

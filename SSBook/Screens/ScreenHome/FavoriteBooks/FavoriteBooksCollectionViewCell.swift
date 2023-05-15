@@ -20,7 +20,7 @@ class FavoriteBooksCollectionViewCell: UICollectionViewCell {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
     label.font = UIFont(name: "Roboto-Bold", size: 16)
-    label.textColor = UIColor(red: 85/255, green: 85/255, blue: 85/255, alpha: 1)
+    label.textColor = .ssBookColorGray
     label.numberOfLines = 2
     return label
   }()
@@ -29,7 +29,7 @@ class FavoriteBooksCollectionViewCell: UICollectionViewCell {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
     label.font = UIFont(name: "Roboto-Regular", size: 14)
-    label.textColor = UIColor(red: 117/255, green: 117/255, blue: 117/255, alpha: 1)
+    label.textColor = .ssBookColorLightGray
     label.numberOfLines = 2
     return label
   }()
@@ -49,7 +49,7 @@ class FavoriteBooksCollectionViewCell: UICollectionViewCell {
   
   override init(frame: CGRect) {
     super.init(frame: .zero)
-    contentView.backgroundColor = UIColor(red: 247/255, green: 247/255, blue: 247/255, alpha: 1)
+    contentView.backgroundColor = .ssBookBackgroundGray
     setupCellView()
     setupConstraints()
   }

@@ -20,7 +20,7 @@ class FavoriteAuthorsCollectionViewCell: UICollectionViewCell {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
     label.font = UIFont(name: "Roboto-Bold", size: 16)
-    label.textColor = UIColor(red: 85/255, green: 85/255, blue: 85/255, alpha: 1)
+    label.textColor = .ssBookColorGray
     return label
   }()
   
@@ -28,7 +28,7 @@ class FavoriteAuthorsCollectionViewCell: UICollectionViewCell {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
     label.font = UIFont(name: "Roboto-Regular", size: 14)
-    label.textColor = UIColor(red: 117/255, green: 117/255, blue: 117/255, alpha: 1)
+    label.textColor = .ssBookColorLightGray
     return label
   }()
   

@@ -13,7 +13,7 @@ class InformationBookView: UIView {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
     label.font = UIFont(name: "Roboto-Bold", size: 20)
-    label.textColor = UIColor(red: 85/255, green: 85/255, blue: 85/255, alpha: 1)
+    label.textColor = .ssBookColorGray
     label.numberOfLines = 2
     return label
   }()
@@ -22,7 +22,7 @@ class InformationBookView: UIView {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
     label.font = UIFont(name: "Roboto-Regular", size: 14)
-    label.textColor = UIColor(red: 117/255, green: 117/255, blue: 117/255, alpha: 1)
+    label.textColor = .ssBookColorLightGray
     return label
   }()
   
@@ -30,7 +30,7 @@ class InformationBookView: UIView {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
     label.font = UIFont(name: "Roboto-Regular", size: 16)
-    label.textColor = UIColor(red: 85/255, green: 85/255, blue: 85/255, alpha: 1)
+    label.textColor = .ssBookColorGray
     label.numberOfLines = 0
     return label
   }()
@@ -39,7 +39,7 @@ class InformationBookView: UIView {
     let button = UIButton()
     button.setImage(UIImage(systemName: "heart"), for: .normal)
     button.titleLabel?.text = "heart"
-    button.tintColor = UIColor(red: 85/255, green: 85/255, blue: 85/255, alpha: 1)
+    button.tintColor = .ssBookColorGray
     button.frame.size = CGSize(width: 20, height: 18.35)
     button.translatesAutoresizingMaskIntoConstraints = false
     return button
