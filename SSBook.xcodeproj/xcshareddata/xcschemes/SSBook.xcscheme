@@ -40,6 +40,17 @@
                ReferencedContainer = "container:SSBook.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "138E9E0C2A27B94E00C5EA2D"
+               BuildableName = "SSBookUITests.xctest"
+               BlueprintName = "SSBookUITests"
+               ReferencedContainer = "container:SSBook.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
